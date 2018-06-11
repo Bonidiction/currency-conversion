@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.uhp_digital.www.currencyconverter.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Spinner
+        android:id="@+id/spinnerTO"
+        android:layout_width="100dp"
+        android:layout_height="59dp"
+        android:layout_alignTop="@+id/editText"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:layout_toEndOf="@+id/editText"
+        android:spinnerMode="dialog"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerFROM" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="116dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0.0"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerFROM"
+        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerFROM"
+        android:layout_width="100dp"
+        android:layout_height="59dp"
+        android:layout_alignTop="@+id/editText"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="116dp"
+        android:layout_toEndOf="@+id/editText"
+        android:spinnerMode="dialog"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="215dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:textAlignment="textEnd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="182dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="180dp"
+        android:layout_marginEnd="100dp"
+        android:text="Convert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
